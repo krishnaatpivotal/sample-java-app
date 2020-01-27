@@ -1,0 +1,14 @@
+apiVersion: build.pivotal.io/v1alpha1
+kind: Image
+metadata:
+  name: java-sample-image
+spec:
+  tag: krishnaktg/kpack-sample-java-app
+  serviceAccount: service-account
+  builder:
+    name: default-builder
+    kind: ClusterBuilder
+  source:
+    git:
+      url: https://github.com/krishnaatpivotal/sample-java-app
+      revision: master
