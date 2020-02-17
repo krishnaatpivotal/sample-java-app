@@ -3,8 +3,9 @@ kind: Image
 metadata:
   name: java-sample-image
 spec:
+  # Set your Docker image.  
   tag: krishnaktg/kpack-sample-java-app
-  serviceAccount: service-account
+  serviceAccount: kpack-service-account
   builder:
     name: default-builder
     kind: ClusterBuilder
